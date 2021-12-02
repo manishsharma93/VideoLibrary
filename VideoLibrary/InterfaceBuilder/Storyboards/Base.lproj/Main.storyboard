@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gBZ-vi-sYP">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Explore Screen View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ExploreScreenViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ExploreScreenViewController" customModule="VideoLibrary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IC0-En-vVL">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="J6Q-a3-t2k"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="DaV-hH-jwC"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="IC0-En-vVL" secondAttribute="bottom" id="566-bX-b17"/>
+                            <constraint firstItem="IC0-En-vVL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="B4K-Vw-0uF"/>
+                            <constraint firstItem="IC0-En-vVL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="V7U-MG-7se"/>
+                            <constraint firstItem="IC0-En-vVL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="h4y-1m-OGu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Fqk-K7-zVy"/>
+                    <connections>
+                        <outlet property="exploreScreenTableView" destination="IC0-En-vVL" id="jo6-Qv-wad"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="79.6875"/>
+        </scene>
+        <!--Video Player View Controller-->
+        <scene sceneID="nYi-Md-dBi">
+            <objects>
+                <viewController storyboardIdentifier="VideoPlayerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7Ev-e1-bVA" customClass="VideoPlayerViewController" customModule="VideoLibrary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mtx-qG-HnT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UKx-8m-XCR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="8rp-Ee-912">
+                                    <size key="itemSize" width="418" height="809"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="4GK-EF-qsx">
+                                        <rect key="frame" x="-2" y="0.0" width="418" height="809"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="XTf-q0-YCD">
+                                            <rect key="frame" x="0.0" y="0.0" width="418" height="809"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="418" height="809"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="7Ev-e1-bVA" id="UBq-4A-Bqu"/>
+                                    <outlet property="delegate" destination="7Ev-e1-bVA" id="HQ6-qq-i8u"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="E5I-UF-hXh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="UKx-8m-XCR" secondAttribute="bottom" id="0pf-Wb-Mr3"/>
+                            <constraint firstItem="UKx-8m-XCR" firstAttribute="trailing" secondItem="E5I-UF-hXh" secondAttribute="trailing" id="62Q-eo-gXm"/>
+                            <constraint firstItem="UKx-8m-XCR" firstAttribute="leading" secondItem="E5I-UF-hXh" secondAttribute="leading" id="K9C-HL-Hbt"/>
+                            <constraint firstAttribute="bottom" secondItem="UKx-8m-XCR" secondAttribute="bottom" id="Ouf-Aq-oG9"/>
+                            <constraint firstItem="UKx-8m-XCR" firstAttribute="trailing" secondItem="E5I-UF-hXh" secondAttribute="trailing" id="Oxp-Zo-7HQ"/>
+                            <constraint firstItem="UKx-8m-XCR" firstAttribute="top" secondItem="mtx-qG-HnT" secondAttribute="top" id="Qzp-zt-OFW"/>
+                            <constraint firstItem="UKx-8m-XCR" firstAttribute="leading" secondItem="E5I-UF-hXh" secondAttribute="leading" id="wwy-GF-gdf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="videoCollectionView" destination="UKx-8m-XCR" id="gvl-p0-v2r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W8X-xj-a3a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1624.6376811594205" y="79.6875"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="612-fu-zYs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gBZ-vi-sYP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mEI-XX-kS9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0xJ-so-YvX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Veh-lN-bKw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="79.6875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
